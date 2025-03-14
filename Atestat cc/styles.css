@@ -1,13 +1,18 @@
 body {
-    background-color: #003DA5; /* Blue background */
+    background: linear-gradient(to bottom, #0056b3, #003DA5); /* Gradient background */
     font-family: Arial, sans-serif;
     color: white;
+    margin: 0;
 }
-
 header {
    display: flex;
-   justify-content: space-around; 
+   justify-content: space-between; 
    padding: 20px; 
+}
+
+nav {
+   display: flex;
+   gap: 10px; /* Space between buttons */
 }
 
 button {
@@ -24,3 +29,13 @@ button {
 button:hover { 
    background-color:#004494; /* Darker blue on hover */ 
 }
+
+section {
+    padding: 50px;
+    height: 100vh; /* Full viewport height */
+}
+
+#info { background-color: #004080; }
+#members { background-color: #003366; }
+#competitions { background-color: #00264d; }
+#news { background-color: #001a33; }
