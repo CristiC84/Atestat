@@ -66,27 +66,27 @@
                 <li><input type='radio' name='q6' value='Real Madrid,Benfica,Barcelona,Aston Villa'>Real Madrid, Benfica, Barcelona, Aston Villa</li> 
                 <li><input type='radio' name='q6' value='Liverpool,Arsenal,AC Milan,Barcelona'> Liverpool, Arsenal, AC Milan, Barcelona</li> 
                 <li><input type='radio' name='q6' value='Real Madrid,Paris,Atletico Madrid,Manchester City'> Real Madrid, Paris, Atletico Madrid, Manchester City</li> 
-				 <li><input type='radio' name='q6' value='Arsenal, Paris, Bracelona, Inter'> Arsenal, Paris, Bracelona, Inter</li> 
+				 <li><input type='radio' name='q6' value='Arsenal,Paris,Bracelona,Inter'> Arsenal, Paris, Bracelona, Inter</li> 
             </ul>  
        </li>
 	   
 	   
 	  </ol>
-	   <!-- Buton pentru trimiterea formularului -->
+	   
     <button type='submit'>Trimite răspunsurile</button>
 </form>
-<p id="result"></p>
+<div id="result" ></div>
   <script>
         function checkAnswers() {
             var correct = 0;
             var total = 6;
 
-            if (document.formular.q1[0].checked) correct++;
+            if (document.querySelector('input[name="q1"]:checked')?.value === "Real Madrid") correct++;
             if (document.querySelector('input[name="q2"]:checked')?.value === "1955") correct++;
             if (document.querySelector('input[name="q3"]:checked')?.value === "Cristiano Ronaldo") correct++;
             if (document.querySelector('input[name="q4"]:checked')?.value === "Real Madrid") correct++;
             if (document.querySelector('input[name="q5"]:checked')?.value === "Allianz Arena") correct++;
-            if (document.querySelector('input[name="q6"]:checked')?.value === "Arsenal, Paris, Bracelona, Inter") correct++;
+            if (document.querySelector('input[name="q6"]:checked')?.value === "Arsenal,Paris,Bracelona,Inter") correct++;
           
             document.getElementById('result').innerHTML = `Ai răspuns corect la ${correct} din ${total} întrebări.`;
         }
