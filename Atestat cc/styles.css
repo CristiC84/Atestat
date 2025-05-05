@@ -18,11 +18,11 @@ nav {
 button {
    background-color: #0056b3; /* Button color */
    border:none; 
-   border-radius:5px; 
+   border-radius:10px; 
    color:white; 
    cursor:pointer; 
-   font-size:16px; 
-   padding:10px 20px; 
+   font-size:10px; 
+   padding:10px 10px; 
    transition:.3s ease; 
 }
 
@@ -54,3 +54,12 @@ section {
 #members { background-color: #003366; }
 #competitions { background-color: #00264d; }
 #news { background-color: #001a33; }
+
+.pulse-button {
+   background-color:#FF5733;  
+   animation:pulse-animation .5s infinite alternate ;  
+}
+@keyframes pulse-animation {
+   from { transform :scale(1); }  
+   to { transform :scale(1.1); }  
+}
